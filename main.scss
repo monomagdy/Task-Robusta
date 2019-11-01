@@ -1,3 +1,479 @@
+$black-color: #000000;
+$white-color: #ffffff;
+$theme-color: #b4777b;
+$dark-white: #f2f2f2;
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+      @content;
+    }
+  } @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) {
+      @content;
+    }
+  }
+}
+
+/*
+@include respond-to(handhelds) {
+      }
+      @include respond-to(medium-screens) {
+      }
+*/
+
 body {
-  background: #f2f2f2;
+  overflow: visible;
+  overflow-x: hidden;
+  .clearfix {
+    clear: both;
+  }
+  background: $white-color;
+  .first-header {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    background: $black-color;
+    @include respond-to(handhelds) {
+      position: relative;
+    }
+    @include respond-to(medium-screens) {
+      position: relative;
+    }
+    h2 {
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 23px;
+      color: $white-color;
+      text-align: center;
+    }
+  }
+  .second-header {
+    top: 38px;
+    padding: 25px;
+    position: relative;
+    background: $white-color;
+    right: 0;
+    left: 0;
+    @include respond-to(handhelds) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      padding-top: 5px;
+    }
+    @include respond-to(medium-screens) {
+      position: relative;
+      top: 0;
+      text-align: center;
+      padding-top: 5px;
+    }
+    .top-left {
+      float: left;
+      width: 15%;
+      @include respond-to(handhelds) {
+        width: 100%;
+        float: none;
+        position: relative;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        float: none;
+        position: relative;
+      }
+
+      ul {
+        list-style: none;
+        li {
+          display: inline;
+          a {
+            color: $black-color;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+            }
+            em.sympol {
+              margin: 0;
+            }
+          }
+          em {
+            margin: 0 5px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .logo {
+      position: absolute;
+      width: 30%;
+      height: 28px;
+      left: 30.95%;
+      top: calc(50% - 28px / 2 - 1.5px);
+      font-family: Catamaran;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 28px;
+      /* identical to box height */
+      text-align: center;
+      text-transform: uppercase;
+      color: $black-color;
+      @include respond-to(handhelds) {
+        width: 100%;
+        float: none;
+        position: relative;
+        text-align: center;
+        left: 0;
+        top: 0;
+        height: auto;
+        padding: 15px;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        float: none;
+        position: relative;
+        text-align: center;
+        left: 0;
+        top: 0;
+        height: auto;
+        padding: 15px;
+      }
+    }
+    .top-right {
+      width: 35%;
+      float: right;
+      @include respond-to(handhelds) {
+        width: 100%;
+        float: none;
+        position: relative;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        float: none;
+        position: relative;
+      }
+
+      ul.my-account {
+        list-style: none;
+        float: left;
+        @include respond-to(handhelds) {
+          float: none;
+        }
+        @include respond-to(medium-screens) {
+          float: none;
+        }
+        li {
+          display: inline;
+          a {
+            color: $black-color;
+            text-decoration: none;
+            &:hover {
+              text-decoration: none;
+            }
+            em.sympol {
+              margin: 0;
+            }
+          }
+          em {
+            margin: 0 5px;
+            font-size: 13px;
+          }
+        }
+      }
+      ul.actions {
+        list-style: none;
+        float: right;
+        @include respond-to(handhelds) {
+          float: none;
+          padding-top: 15px;
+        }
+        @include respond-to(medium-screens) {
+          float: none;
+          padding-top: 15px;
+        }
+        li {
+          display: inline-block;
+          a {
+            color: $theme-color;
+            background: $white-color;
+            border: 2px solid $theme-color;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            box-sizing: border-box;
+            &:hover {
+              text-decoration: none;
+              background: $theme-color;
+              color: $white-color;
+            }
+            em {
+              vertical-align: text-top;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .container {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1170px;
+    @include respond-to(handhelds) {
+      width: 100%;
+    }
+    @include respond-to(medium-screens) {
+      width: 100%;
+    }
+  }
+  /*
+  ******Menu Start*******
+  */
+  nav {
+    position: relative;
+    margin-top: 45px;
+    text-align: center;
+    .menu-list {
+      list-style: none;
+      @include respond-to(handhelds) {
+      }
+      @include respond-to(medium-screens) {
+      }
+      li.menu-item {
+        display: inline-block;
+        margin: 0 20px;
+        @include respond-to(handhelds) {
+          display: block;
+          margin: 20px;
+        }
+        @include respond-to(medium-screens) {
+          display: block;
+          margin: 20px;
+        }
+        &:last-of-type {
+          a {
+            background: $black-color;
+            color: $white-color;
+            &:hover {
+              color: $white-color;
+              text-decoration: none;
+              border-bottom: 3px solid $white-color;
+            }
+          }
+        }
+        &:hover > .toggle-div {
+          display: block !important;
+        }
+        > a {
+          color: $black-color;
+          text-decoration: none;
+          text-transform: capitalize;
+          border-bottom: 3px solid $white-color;
+          padding: 10px;
+          &:hover {
+            color: $black-color;
+            text-decoration: none;
+            border-bottom: 3px solid $theme-color;
+          }
+        }
+        .toggle-div {
+          display: none;
+          .sub-menu {
+            list-style: none;
+            position: absolute;
+            text-align: left;
+            left: 100px;
+            top: 50px;
+            @include respond-to(medium-screens) {
+              background: $theme-color;
+              color: $white-color;
+              position: relative;
+              left: 0;
+              top: 10px;
+              padding: 1px 15px;
+              border-radius: 1px;
+            }
+            @include respond-to(handhelds) {
+              background: $theme-color;
+              color: $white-color;
+              position: relative;
+              left: 0;
+              padding: 1px 15px;
+              border-radius: 1px;
+            }
+            h4 {
+              margin-bottom: 5px;
+            }
+            li {
+              text-align: left;
+              margin: 10px 0;
+              float: left;
+              width: 55%;
+              @include respond-to(medium-screens) {
+                float: none;
+                width: auto;
+                color: $white-color;
+              }
+              @include respond-to(handhelds) {
+                float: none;
+                width: auto;
+                color: $white-color;
+              }
+              a {
+                color: $black-color;
+                font-size: 13px;
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 10px 0;
+                &:hover {
+                  color: $theme-color;
+                  text-decoration: none;
+                }
+                @include respond-to(medium-screens) {
+                  color: $white-color;
+                }
+                @include respond-to(handhelds) {
+                  color: $white-color;
+                }
+              }
+            }
+          }
+          .sub-menu-two {
+            list-style: none;
+            position: absolute;
+            left: 300px;
+            text-align: left;
+            top: 50px;
+
+            @include respond-to(medium-screens) {
+              background: $theme-color;
+              color: $white-color;
+              position: relative;
+              left: 0;
+              top: 5px;
+              padding: 1px 15px;
+              border-radius: 1px;
+            }
+            @include respond-to(handhelds) {
+              background: $theme-color;
+              color: $white-color;
+              position: relative;
+              left: 0;
+              padding: 1px 15px;
+              border-radius: 1px;
+            }
+            h4 {
+              margin-bottom: 5px;
+            }
+            li {
+              text-align: left;
+              margin: 10px 0;
+              float: left;
+              width: 34%;
+              @include respond-to(medium-screens) {
+                float: none;
+                width: auto;
+                color: $white-color;
+              }
+              @include respond-to(handhelds) {
+                float: none;
+                width: auto;
+                color: $white-color;
+              }
+              a {
+                color: $black-color;
+                font-size: 13px;
+                text-decoration: none;
+                text-transform: capitalize;
+                padding: 10px 0;
+                &:hover {
+                  color: $theme-color;
+                  text-decoration: none;
+                }
+                @include respond-to(medium-screens) {
+                  color: $white-color;
+                }
+                @include respond-to(handhelds) {
+                  color: $white-color;
+                }
+              }
+            }
+          }
+          .card {
+            position: absolute;
+            right: 300px;
+            top: 50px;
+            @include respond-to(medium-screens) {
+              display: none;
+            }
+            @include respond-to(handhelds) {
+              display: none;
+            }
+            &:last-of-type {
+              right: 100px;
+            }
+            img {
+              height: 170px;
+            }
+            h3 {
+              margin: 5px;
+            }
+            figcaption {
+              font-size: 13px;
+              margin: 10px 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*
+  *******Menu End*******
+  */
+}
+
+@include respond-to(medium-screens) {
+  #burger {
+    visibility: hidden;
+  }
+  input + label {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+  }
+  label:hover {
+    cursor: pointer;
+  }
+  input:checked + label {
+  }
+  input ~ nav {
+    display: none;
+    position: fixed;
+    top: 10px;
+    background: $white-color;
+    z-index: 100;
+    .toggle-div {
+      position: relative;
+    }
+  }
+
+  input:checked ~ nav {
+    display: block;
+  }
 }
