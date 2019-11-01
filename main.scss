@@ -29,8 +29,10 @@ $break-large: 1024px;
 */
 
 body {
+  font-family: Catamaran, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: visible;
   overflow-x: hidden;
+  background: $dark-white !important;
   .clearfix {
     clear: both;
   }
@@ -63,8 +65,8 @@ body {
     padding: 25px;
     position: relative;
     background: $white-color;
-    right: 0;
-    left: 0;
+    margin-right: -10px;
+    margin-left: -10px;
     @include respond-to(handhelds) {
       position: relative;
       top: 0;
@@ -238,224 +240,559 @@ body {
       width: 100%;
     }
   }
-  /*
-  ******Menu Start*******
-  */
-  nav {
-    position: relative;
-    margin-top: 45px;
-    text-align: center;
-    .menu-list {
-      list-style: none;
+  /*************
+  Menu Start
+  *************/
+  section.menu {
+    min-height: 110px;
+    background: $white-color;
+    margin-right: -10px;
+    margin-left: -10px;
+    @include respond-to(handhelds) {
+      min-height: 1px;
+    }
+    @include respond-to(medium-screens) {
+      min-height: 1px;
+    }
+    nav {
+      position: relative;
+      margin-top: 45px;
+      text-align: center;
       @include respond-to(handhelds) {
+        text-align: left;
+        border: 1px solid #b5797d;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
       @include respond-to(medium-screens) {
+        text-align: left;
+        border: 1px solid #b5797d;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
       }
-      li.menu-item {
-        display: inline-block;
-        margin: 0 20px;
-        @include respond-to(handhelds) {
-          display: block;
-          margin: 20px;
-        }
-        @include respond-to(medium-screens) {
-          display: block;
-          margin: 20px;
-        }
-        &:last-of-type {
-          a {
-            background: $black-color;
-            color: $white-color;
-            &:hover {
+
+      .menu-list {
+        list-style: none;
+
+        li.menu-item {
+          display: inline-block;
+          margin: 0 20px;
+          @include respond-to(handhelds) {
+            display: block;
+            margin: 20px;
+          }
+          @include respond-to(medium-screens) {
+            display: block;
+            margin: 20px;
+          }
+          &:last-of-type {
+            a {
+              background: $black-color;
               color: $white-color;
-              text-decoration: none;
-              border-bottom: 3px solid $white-color;
+              &:hover {
+                color: $white-color;
+                text-decoration: none;
+                border-bottom: 3px solid $white-color;
+              }
             }
           }
-        }
-        &:hover > .toggle-div {
+          /*  &:hover > .toggle-div {
           display: block !important;
-        }
-        > a {
-          color: $black-color;
-          text-decoration: none;
-          text-transform: capitalize;
-          border-bottom: 3px solid $white-color;
-          padding: 10px;
-          &:hover {
+        }*/
+          > a {
             color: $black-color;
             text-decoration: none;
-            border-bottom: 3px solid $theme-color;
+            text-transform: capitalize;
+            border-bottom: 3px solid $white-color;
+            padding: 10px;
+            &:hover {
+              color: $black-color;
+              text-decoration: none;
+              border-bottom: 3px solid $theme-color;
+            }
+          }
+          .toggle-div {
+            display: none;
+            min-height: 350px;
+            z-index: 10;
+            background: rgb(255, 255, 255);
+            .sub-menu {
+              list-style: none;
+              position: absolute;
+              text-align: left;
+              left: 100px;
+              top: 50px;
+              @include respond-to(medium-screens) {
+                background: $theme-color;
+                color: $white-color;
+                position: relative;
+                left: 0;
+                top: 10px;
+                padding: 1px 15px;
+                border-radius: 1px;
+              }
+              @include respond-to(handhelds) {
+                background: $theme-color;
+                color: $white-color;
+                position: relative;
+                left: 0;
+                padding: 1px 15px;
+                border-radius: 1px;
+              }
+              h4 {
+                margin-bottom: 5px;
+              }
+              li {
+                text-align: left;
+                margin: 10px 0;
+                float: left;
+                width: 55%;
+                @include respond-to(medium-screens) {
+                  float: none;
+                  width: auto;
+                  color: $white-color;
+                }
+                @include respond-to(handhelds) {
+                  float: none;
+                  width: auto;
+                  color: $white-color;
+                }
+                a {
+                  color: $black-color;
+                  font-size: 13px;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  padding: 10px 0;
+                  &:hover {
+                    color: $theme-color;
+                    text-decoration: none;
+                  }
+                  @include respond-to(medium-screens) {
+                    color: $white-color;
+                  }
+                  @include respond-to(handhelds) {
+                    color: $white-color;
+                  }
+                }
+              }
+            }
+            .sub-menu-two {
+              list-style: none;
+              position: absolute;
+              left: 300px;
+              text-align: left;
+              top: 50px;
+
+              @include respond-to(medium-screens) {
+                background: $theme-color;
+                color: $white-color;
+                position: relative;
+                left: 0;
+                top: 5px;
+                padding: 1px 15px;
+                border-radius: 1px;
+              }
+              @include respond-to(handhelds) {
+                background: $theme-color;
+                color: $white-color;
+                position: relative;
+                left: 0;
+                padding: 1px 15px;
+                border-radius: 1px;
+              }
+              h4 {
+                margin-bottom: 5px;
+              }
+              li {
+                text-align: left;
+                margin: 10px 0;
+                float: left;
+                width: 34%;
+                @include respond-to(medium-screens) {
+                  float: none;
+                  width: auto;
+                  color: $white-color;
+                }
+                @include respond-to(handhelds) {
+                  float: none;
+                  width: auto;
+                  color: $white-color;
+                }
+                a {
+                  color: $black-color;
+                  font-size: 13px;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  padding: 10px 0;
+                  &:hover {
+                    color: $theme-color;
+                    text-decoration: none;
+                  }
+                  @include respond-to(medium-screens) {
+                    color: $white-color;
+                  }
+                  @include respond-to(handhelds) {
+                    color: $white-color;
+                  }
+                }
+              }
+            }
+            .card {
+              position: absolute;
+              right: 300px;
+              top: 50px;
+              @include respond-to(medium-screens) {
+                display: none;
+              }
+              @include respond-to(handhelds) {
+                display: none;
+              }
+              &:last-of-type {
+                right: 100px;
+              }
+              img {
+                height: 170px;
+              }
+              h3 {
+                margin: 5px;
+              }
+              figcaption {
+                font-size: 13px;
+                margin: 10px 0;
+                text-align: center;
+              }
+            }
           }
         }
-        .toggle-div {
-          display: none;
-          .sub-menu {
-            list-style: none;
-            position: absolute;
-            text-align: left;
-            left: 100px;
-            top: 50px;
-            @include respond-to(medium-screens) {
-              background: $theme-color;
-              color: $white-color;
-              position: relative;
-              left: 0;
-              top: 10px;
-              padding: 1px 15px;
-              border-radius: 1px;
-            }
-            @include respond-to(handhelds) {
-              background: $theme-color;
-              color: $white-color;
-              position: relative;
-              left: 0;
-              padding: 1px 15px;
-              border-radius: 1px;
-            }
-            h4 {
-              margin-bottom: 5px;
-            }
-            li {
-              text-align: left;
-              margin: 10px 0;
-              float: left;
-              width: 55%;
-              @include respond-to(medium-screens) {
-                float: none;
-                width: auto;
-                color: $white-color;
-              }
-              @include respond-to(handhelds) {
-                float: none;
-                width: auto;
-                color: $white-color;
-              }
-              a {
-                color: $black-color;
-                font-size: 13px;
-                text-decoration: none;
-                text-transform: capitalize;
-                padding: 10px 0;
-                &:hover {
-                  color: $theme-color;
-                  text-decoration: none;
-                }
-                @include respond-to(medium-screens) {
-                  color: $white-color;
-                }
-                @include respond-to(handhelds) {
-                  color: $white-color;
-                }
-              }
-            }
-          }
-          .sub-menu-two {
-            list-style: none;
-            position: absolute;
-            left: 300px;
-            text-align: left;
-            top: 50px;
-
-            @include respond-to(medium-screens) {
-              background: $theme-color;
-              color: $white-color;
-              position: relative;
-              left: 0;
-              top: 5px;
-              padding: 1px 15px;
-              border-radius: 1px;
-            }
-            @include respond-to(handhelds) {
-              background: $theme-color;
-              color: $white-color;
-              position: relative;
-              left: 0;
-              padding: 1px 15px;
-              border-radius: 1px;
-            }
-            h4 {
-              margin-bottom: 5px;
-            }
-            li {
-              text-align: left;
-              margin: 10px 0;
-              float: left;
-              width: 34%;
-              @include respond-to(medium-screens) {
-                float: none;
-                width: auto;
-                color: $white-color;
-              }
-              @include respond-to(handhelds) {
-                float: none;
-                width: auto;
-                color: $white-color;
-              }
-              a {
-                color: $black-color;
-                font-size: 13px;
-                text-decoration: none;
-                text-transform: capitalize;
-                padding: 10px 0;
-                &:hover {
-                  color: $theme-color;
-                  text-decoration: none;
-                }
-                @include respond-to(medium-screens) {
-                  color: $white-color;
-                }
-                @include respond-to(handhelds) {
-                  color: $white-color;
-                }
-              }
-            }
-          }
-          .card {
-            position: absolute;
-            right: 300px;
-            top: 50px;
-            @include respond-to(medium-screens) {
-              display: none;
-            }
-            @include respond-to(handhelds) {
-              display: none;
-            }
-            &:last-of-type {
-              right: 100px;
-            }
-            img {
-              height: 170px;
-            }
-            h3 {
-              margin: 5px;
-            }
-            figcaption {
-              font-size: 13px;
-              margin: 10px 0;
-              text-align: center;
-            }
+        li.menu-item.active {
+          > a {
+            border-bottom: 3px solid $theme-color;
           }
         }
       }
     }
   }
-  /*
-  *******Menu End*******
-  */
+  /*********
+  Menu End
+************/
+
+  /*************
+  Slider
+   ***********/
+  section.landing {
+    background: $white-color;
+    min-height: 400px;
+    padding-top: 50px;
+    margin-right: -10px;
+    margin-left: -10px;
+    @include respond-to(handhelds) {
+      min-height: 1px;
+    }
+    @include respond-to(medium-screens) {
+      min-height: 1px;
+    }
+    .carousel-container {
+      width: 60%;
+      float: right;
+      position: relative;
+      @include respond-to(medium-screens) {
+        float: none;
+        margin: auto;
+      }
+      @include respond-to(handhelds) {
+        float: none;
+        margin: auto;
+      }
+      .owl-carousel {
+        div {
+          img {
+            width: 80%;
+            @include respond-to(handhelds) {
+              width: 100%;
+            }
+            @include respond-to(medium-screens) {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .rect {
+        position: absolute;
+        width: 80%;
+        height: 205px;
+        left: -74px;
+        top: 61%;
+        background: #d1cccb;
+        mix-blend-mode: normal;
+        opacity: 0.6;
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+        @include respond-to(handhelds) {
+          display: none;
+        }
+      }
+    }
+    .carousel-side {
+      float: left;
+      width: 40%;
+      text-align: center;
+      @include respond-to(medium-screens) {
+        width: 100%;
+        margin-bottom: 45px;
+      }
+      @include respond-to(handhelds) {
+        width: 100%;
+        margin-bottom: 45px;
+      }
+      h4 {
+        letter-spacing: 12.381px;
+        text-transform: capitalize;
+        font-weight: normal;
+        @include respond-to(medium-screens) {
+          font-size: 25px;
+        }
+        @include respond-to(handhelds) {
+          font-size: 25px;
+        }
+        span {
+          letter-spacing: 0;
+          vertical-align: super;
+          font-weight: bold;
+          position: absolute;
+          left: 30%;
+          z-index: 10;
+          @include respond-to(medium-screens) {
+            display: none;
+          }
+          @include respond-to(handhelds) {
+            display: none;
+          }
+        }
+      }
+      h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 82px;
+        text-transform: uppercase;
+        @include respond-to(medium-screens) {
+          font-size: 36px;
+        }
+        @include respond-to(handhelds) {
+          font-size: 36px;
+        }
+      }
+      button {
+        background: $theme-color;
+        display: block;
+        margin: auto;
+        text-transform: capitalize;
+        border: 0;
+        outline: 0;
+        color: $white-color;
+        padding: 10px 40px;
+        font-size: 15px;
+        font-weight: normal;
+        border-radius: 1px;
+        cursor: pointer;
+      }
+    }
+  }
+  /*************
+  slider End
+   /*************/
+
+  /*****************
+  Latest Section
+ *****************/
+  .latest {
+    background: $white-color;
+    margin-left: -10px;
+    margin-right: -10px;
+    min-height: 600px;
+    padding: 45px 100px;
+    padding-right: 0;
+    position: relative;
+    text-align: center;
+    @include respond-to(handhelds) {
+      padding: 45px;
+      min-height: 1px;
+    }
+    @include respond-to(medium-screens) {
+      padding: 45px;
+      min-height: 1px;
+    }
+    .card-big {
+      float: left;
+      margin-left: 70px;
+      @include respond-to(handhelds) {
+        float: none;
+        margin-bottom: 40px;
+        margin-left: 0;
+      }
+      @include respond-to(medium-screens) {
+        float: none;
+        margin-bottom: 40px;
+        margin-left: 0;
+      }
+      img {
+        width: 80%;
+        @include respond-to(handhelds) {
+          width: 100%;
+        }
+        @include respond-to(medium-screens) {
+          width: 100%;
+        }
+      }
+      figcaption {
+        h4 {
+          font-style: normal;
+          font-weight: bold;
+          font-size: 21px;
+          line-height: 34px;
+          text-align: center;
+          text-transform: uppercase;
+          @include respond-to(handhelds) {
+            margin: 0;
+          }
+          @include respond-to(medium-screens) {
+            margin: 0;
+          }
+        }
+        a {
+          text-decoration: none;
+          font-size: 17px;
+          line-height: 28px;
+          color: $black-color;
+          &:hover {
+            text-decoration: none;
+            color: $theme-color;
+          }
+          span {
+            vertical-align: super;
+          }
+        }
+      }
+    }
+  }
+  /*****************
+  end of Latest Section
+ *****************/
+  .quote {
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    background: $white-color;
+    font-size: 43px;
+    br {
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+    }
+    span {
+      border-bottom: 9px solid rgba($black-color, 0.06);
+      color: rgba($white-color, 0);
+      position: relative;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+      &:first-of-type {
+        left: 170px;
+        top: -15px;
+      }
+      &:last-of-type {
+        left: -200px;
+        top: -15px;
+      }
+    }
+    img {
+      display: inline;
+      &:first-of-type {
+        transform: rotate(10deg);
+        top: -35px;
+        position: relative;
+        left: 10px;
+      }
+      &:last-of-type {
+        transform: rotate(-210deg);
+        top: -20px;
+        position: relative;
+        left: -10px;
+      }
+    }
+  }
 }
 
-@include respond-to(medium-screens) {
-  #burger {
-    visibility: hidden;
+/****************************
+overide carousel defaults
+****************************/
+.owl-nav {
+  position: absolute;
+  left: -41.5%;
+  top: 55%;
+  @include respond-to(medium-screens) {
+    position: relative;
+    left: 15%;
+    top: 0;
   }
+  @include respond-to(handhelds) {
+    position: relative;
+    left: 15%;
+    top: 0;
+  }
+  button {
+    color: $theme-color;
+    border: 1px solid rgba($black-color, 0.5);
+    height: 50px;
+    width: 50px;
+    margin-right: 45px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      border: 1px solid $theme-color;
+      em {
+        color: $theme-color;
+      }
+    }
+    &:focus {
+      outline: 0;
+    }
+    em {
+      font-size: 14px;
+      color: rgba($black-color, 0.5);
+    }
+  }
+}
+
+/***************************
+Handle Menu in mobile screens
+**********************************/
+
+#burger {
+  visibility: hidden;
+}
+@media only screen and (max-width: 768px) {
   input + label {
     position: fixed;
-    top: 40px;
-    right: 40px;
-    height: 20px;
-    width: 15px;
+    top: 80px;
+    height: auto;
+    width: 100%;
     z-index: 5;
+    font-size: 28px;
+    display: block;
+    margin: auto;
+    left: 10px;
   }
   label:hover {
     cursor: pointer;
@@ -464,10 +801,13 @@ body {
   }
   input ~ nav {
     display: none;
-    position: fixed;
-    top: 10px;
+    position: fixed !important;
+    top: 80px;
     background: $white-color;
     z-index: 100;
+    left: 0;
+    margin: auto;
+    padding: 0;
     .toggle-div {
       position: relative;
     }

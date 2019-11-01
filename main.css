@@ -5,15 +5,29 @@
       }
 */
 body {
+  font-family: Catamaran, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: visible;
   overflow-x: hidden;
+  background: #f2f2f2 !important;
   background: #ffffff;
-  /*
-  ******Menu Start*******
-  */
-  /*
-  *******Menu End*******
-  */ }
+  /*************
+  Menu Start
+  *************/
+  /*********
+  Menu End
+************/
+  /*************
+  Slider
+   ***********/
+  /*************
+  slider End
+   /*************/
+ /*****************
+ Latest Section
+*****************/
+ /*****************
+ end of Latest Section
+*****************/ }
   body .clearfix {
     clear: both; }
   body .first-header {
@@ -42,8 +56,8 @@ body {
     padding: 25px;
     position: relative;
     background: #ffffff;
-    right: 0;
-    left: 0; }
+    margin-right: -10px;
+    margin-left: -10px; }
     @media only screen and (max-width: 320px) {
       body .second-header {
         position: relative;
@@ -193,196 +207,480 @@ body {
     @media only screen and (min-width: 321px) and (max-width: 1023px) {
       body .container {
         width: 100%; } }
-  body nav {
-    position: relative;
-    margin-top: 45px;
-    text-align: center; }
-    body nav .menu-list {
-      list-style: none; }
-      body nav .menu-list li.menu-item {
-        display: inline-block;
-        margin: 0 20px; }
-        @media only screen and (max-width: 320px) {
-          body nav .menu-list li.menu-item {
-            display: block;
-            margin: 20px; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
-          body nav .menu-list li.menu-item {
-            display: block;
-            margin: 20px; } }
-        body nav .menu-list li.menu-item:last-of-type a {
-          background: #000000;
-          color: #ffffff; }
-          body nav .menu-list li.menu-item:last-of-type a:hover {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 3px solid #ffffff; }
-        body nav .menu-list li.menu-item:hover > .toggle-div {
-          display: block !important; }
-        body nav .menu-list li.menu-item > a {
-          color: #000000;
-          text-decoration: none;
-          text-transform: capitalize;
-          border-bottom: 3px solid #ffffff;
-          padding: 10px; }
-          body nav .menu-list li.menu-item > a:hover {
+  body section.menu {
+    min-height: 110px;
+    background: #ffffff;
+    margin-right: -10px;
+    margin-left: -10px; }
+    @media only screen and (max-width: 320px) {
+      body section.menu {
+        min-height: 1px; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body section.menu {
+        min-height: 1px; } }
+    body section.menu nav {
+      position: relative;
+      margin-top: 45px;
+      text-align: center; }
+      @media only screen and (max-width: 320px) {
+        body section.menu nav {
+          text-align: left;
+          border: 1px solid #b5797d;
+          padding: 0;
+          margin-left: 0;
+          margin-right: 0; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body section.menu nav {
+          text-align: left;
+          border: 1px solid #b5797d;
+          padding: 0;
+          margin-left: 0;
+          margin-right: 0; } }
+      body section.menu nav .menu-list {
+        list-style: none; }
+        body section.menu nav .menu-list li.menu-item {
+          display: inline-block;
+          margin: 0 20px;
+        /*  &:hover > .toggle-div {
+        display: block !important;
+      }*/ }
+          @media only screen and (max-width: 320px) {
+            body section.menu nav .menu-list li.menu-item {
+              display: block;
+              margin: 20px; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            body section.menu nav .menu-list li.menu-item {
+              display: block;
+              margin: 20px; } }
+          body section.menu nav .menu-list li.menu-item:last-of-type a {
+            background: #000000;
+            color: #ffffff; }
+            body section.menu nav .menu-list li.menu-item:last-of-type a:hover {
+              color: #ffffff;
+              text-decoration: none;
+              border-bottom: 3px solid #ffffff; }
+          body section.menu nav .menu-list li.menu-item > a {
             color: #000000;
             text-decoration: none;
-            border-bottom: 3px solid #b4777b; }
-        body nav .menu-list li.menu-item .toggle-div {
-          display: none; }
-          body nav .menu-list li.menu-item .toggle-div .sub-menu {
-            list-style: none;
-            position: absolute;
-            text-align: left;
-            left: 100px;
-            top: 50px; }
-            @media only screen and (min-width: 321px) and (max-width: 1023px) {
-              body nav .menu-list li.menu-item .toggle-div .sub-menu {
-                background: #b4777b;
-                color: #ffffff;
-                position: relative;
-                left: 0;
-                top: 10px;
-                padding: 1px 15px;
-                border-radius: 1px; } }
-            @media only screen and (max-width: 320px) {
-              body nav .menu-list li.menu-item .toggle-div .sub-menu {
-                background: #b4777b;
-                color: #ffffff;
-                position: relative;
-                left: 0;
-                padding: 1px 15px;
-                border-radius: 1px; } }
-            body nav .menu-list li.menu-item .toggle-div .sub-menu h4 {
-              margin-bottom: 5px; }
-            body nav .menu-list li.menu-item .toggle-div .sub-menu li {
+            text-transform: capitalize;
+            border-bottom: 3px solid #ffffff;
+            padding: 10px; }
+            body section.menu nav .menu-list li.menu-item > a:hover {
+              color: #000000;
+              text-decoration: none;
+              border-bottom: 3px solid #b4777b; }
+          body section.menu nav .menu-list li.menu-item .toggle-div {
+            display: none;
+            min-height: 350px;
+            z-index: 10;
+            background: white; }
+            body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu {
+              list-style: none;
+              position: absolute;
               text-align: left;
-              margin: 10px 0;
-              float: left;
-              width: 55%; }
+              left: 100px;
+              top: 50px; }
               @media only screen and (min-width: 321px) and (max-width: 1023px) {
-                body nav .menu-list li.menu-item .toggle-div .sub-menu li {
-                  float: none;
-                  width: auto;
-                  color: #ffffff; } }
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu {
+                  background: #b4777b;
+                  color: #ffffff;
+                  position: relative;
+                  left: 0;
+                  top: 10px;
+                  padding: 1px 15px;
+                  border-radius: 1px; } }
               @media only screen and (max-width: 320px) {
-                body nav .menu-list li.menu-item .toggle-div .sub-menu li {
-                  float: none;
-                  width: auto;
-                  color: #ffffff; } }
-              body nav .menu-list li.menu-item .toggle-div .sub-menu li a {
-                color: #000000;
-                font-size: 13px;
-                text-decoration: none;
-                text-transform: capitalize;
-                padding: 10px 0; }
-                body nav .menu-list li.menu-item .toggle-div .sub-menu li a:hover {
-                  color: #b4777b;
-                  text-decoration: none; }
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu {
+                  background: #b4777b;
+                  color: #ffffff;
+                  position: relative;
+                  left: 0;
+                  padding: 1px 15px;
+                  border-radius: 1px; } }
+              body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu h4 {
+                margin-bottom: 5px; }
+              body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li {
+                text-align: left;
+                margin: 10px 0;
+                float: left;
+                width: 55%; }
                 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-                  body nav .menu-list li.menu-item .toggle-div .sub-menu li a {
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li {
+                    float: none;
+                    width: auto;
                     color: #ffffff; } }
                 @media only screen and (max-width: 320px) {
-                  body nav .menu-list li.menu-item .toggle-div .sub-menu li a {
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li {
+                    float: none;
+                    width: auto;
                     color: #ffffff; } }
-          body nav .menu-list li.menu-item .toggle-div .sub-menu-two {
-            list-style: none;
-            position: absolute;
-            left: 300px;
-            text-align: left;
-            top: 50px; }
-            @media only screen and (min-width: 321px) and (max-width: 1023px) {
-              body nav .menu-list li.menu-item .toggle-div .sub-menu-two {
-                background: #b4777b;
-                color: #ffffff;
-                position: relative;
-                left: 0;
-                top: 5px;
-                padding: 1px 15px;
-                border-radius: 1px; } }
-            @media only screen and (max-width: 320px) {
-              body nav .menu-list li.menu-item .toggle-div .sub-menu-two {
-                background: #b4777b;
-                color: #ffffff;
-                position: relative;
-                left: 0;
-                padding: 1px 15px;
-                border-radius: 1px; } }
-            body nav .menu-list li.menu-item .toggle-div .sub-menu-two h4 {
-              margin-bottom: 5px; }
-            body nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a {
+                  color: #000000;
+                  font-size: 13px;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  padding: 10px 0; }
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a:hover {
+                    color: #b4777b;
+                    text-decoration: none; }
+                  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                    body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a {
+                      color: #ffffff; } }
+                  @media only screen and (max-width: 320px) {
+                    body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a {
+                      color: #ffffff; } }
+            body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two {
+              list-style: none;
+              position: absolute;
+              left: 300px;
               text-align: left;
-              margin: 10px 0;
-              float: left;
-              width: 34%; }
+              top: 50px; }
               @media only screen and (min-width: 321px) and (max-width: 1023px) {
-                body nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
-                  float: none;
-                  width: auto;
-                  color: #ffffff; } }
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two {
+                  background: #b4777b;
+                  color: #ffffff;
+                  position: relative;
+                  left: 0;
+                  top: 5px;
+                  padding: 1px 15px;
+                  border-radius: 1px; } }
               @media only screen and (max-width: 320px) {
-                body nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
-                  float: none;
-                  width: auto;
-                  color: #ffffff; } }
-              body nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
-                color: #000000;
-                font-size: 13px;
-                text-decoration: none;
-                text-transform: capitalize;
-                padding: 10px 0; }
-                body nav .menu-list li.menu-item .toggle-div .sub-menu-two li a:hover {
-                  color: #b4777b;
-                  text-decoration: none; }
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two {
+                  background: #b4777b;
+                  color: #ffffff;
+                  position: relative;
+                  left: 0;
+                  padding: 1px 15px;
+                  border-radius: 1px; } }
+              body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two h4 {
+                margin-bottom: 5px; }
+              body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
+                text-align: left;
+                margin: 10px 0;
+                float: left;
+                width: 34%; }
                 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-                  body nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
+                    float: none;
+                    width: auto;
                     color: #ffffff; } }
                 @media only screen and (max-width: 320px) {
-                  body nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
+                    float: none;
+                    width: auto;
                     color: #ffffff; } }
-          body nav .menu-list li.menu-item .toggle-div .card {
-            position: absolute;
-            right: 300px;
-            top: 50px; }
-            @media only screen and (min-width: 321px) and (max-width: 1023px) {
-              body nav .menu-list li.menu-item .toggle-div .card {
-                display: none; } }
-            @media only screen and (max-width: 320px) {
-              body nav .menu-list li.menu-item .toggle-div .card {
-                display: none; } }
-            body nav .menu-list li.menu-item .toggle-div .card:last-of-type {
-              right: 100px; }
-            body nav .menu-list li.menu-item .toggle-div .card img {
-              height: 170px; }
-            body nav .menu-list li.menu-item .toggle-div .card h3 {
-              margin: 5px; }
-            body nav .menu-list li.menu-item .toggle-div .card figcaption {
-              font-size: 13px;
-              margin: 10px 0;
-              text-align: center; }
+                body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
+                  color: #000000;
+                  font-size: 13px;
+                  text-decoration: none;
+                  text-transform: capitalize;
+                  padding: 10px 0; }
+                  body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a:hover {
+                    color: #b4777b;
+                    text-decoration: none; }
+                  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                    body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
+                      color: #ffffff; } }
+                  @media only screen and (max-width: 320px) {
+                    body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
+                      color: #ffffff; } }
+            body section.menu nav .menu-list li.menu-item .toggle-div .card {
+              position: absolute;
+              right: 300px;
+              top: 50px; }
+              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                body section.menu nav .menu-list li.menu-item .toggle-div .card {
+                  display: none; } }
+              @media only screen and (max-width: 320px) {
+                body section.menu nav .menu-list li.menu-item .toggle-div .card {
+                  display: none; } }
+              body section.menu nav .menu-list li.menu-item .toggle-div .card:last-of-type {
+                right: 100px; }
+              body section.menu nav .menu-list li.menu-item .toggle-div .card img {
+                height: 170px; }
+              body section.menu nav .menu-list li.menu-item .toggle-div .card h3 {
+                margin: 5px; }
+              body section.menu nav .menu-list li.menu-item .toggle-div .card figcaption {
+                font-size: 13px;
+                margin: 10px 0;
+                text-align: center; }
+        body section.menu nav .menu-list li.menu-item.active > a {
+          border-bottom: 3px solid #b4777b; }
+  body section.landing {
+    background: #ffffff;
+    min-height: 400px;
+    padding-top: 50px;
+    margin-right: -10px;
+    margin-left: -10px; }
+    @media only screen and (max-width: 320px) {
+      body section.landing {
+        min-height: 1px; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body section.landing {
+        min-height: 1px; } }
+    body section.landing .carousel-container {
+      width: 60%;
+      float: right;
+      position: relative; }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body section.landing .carousel-container {
+          float: none;
+          margin: auto; } }
+      @media only screen and (max-width: 320px) {
+        body section.landing .carousel-container {
+          float: none;
+          margin: auto; } }
+      body section.landing .carousel-container .owl-carousel div img {
+        width: 80%; }
+        @media only screen and (max-width: 320px) {
+          body section.landing .carousel-container .owl-carousel div img {
+            width: 100%; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body section.landing .carousel-container .owl-carousel div img {
+            width: 100%; } }
+      body section.landing .carousel-container .rect {
+        position: absolute;
+        width: 80%;
+        height: 205px;
+        left: -74px;
+        top: 61%;
+        background: #d1cccb;
+        mix-blend-mode: normal;
+        opacity: 0.6; }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body section.landing .carousel-container .rect {
+            display: none; } }
+        @media only screen and (max-width: 320px) {
+          body section.landing .carousel-container .rect {
+            display: none; } }
+    body section.landing .carousel-side {
+      float: left;
+      width: 40%;
+      text-align: center; }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body section.landing .carousel-side {
+          width: 100%;
+          margin-bottom: 45px; } }
+      @media only screen and (max-width: 320px) {
+        body section.landing .carousel-side {
+          width: 100%;
+          margin-bottom: 45px; } }
+      body section.landing .carousel-side h4 {
+        letter-spacing: 12.381px;
+        text-transform: capitalize;
+        font-weight: normal; }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body section.landing .carousel-side h4 {
+            font-size: 25px; } }
+        @media only screen and (max-width: 320px) {
+          body section.landing .carousel-side h4 {
+            font-size: 25px; } }
+        body section.landing .carousel-side h4 span {
+          letter-spacing: 0;
+          vertical-align: super;
+          font-weight: bold;
+          position: absolute;
+          left: 30%;
+          z-index: 10; }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            body section.landing .carousel-side h4 span {
+              display: none; } }
+          @media only screen and (max-width: 320px) {
+            body section.landing .carousel-side h4 span {
+              display: none; } }
+      body section.landing .carousel-side h1 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 82px;
+        text-transform: uppercase; }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body section.landing .carousel-side h1 {
+            font-size: 36px; } }
+        @media only screen and (max-width: 320px) {
+          body section.landing .carousel-side h1 {
+            font-size: 36px; } }
+      body section.landing .carousel-side button {
+        background: #b4777b;
+        display: block;
+        margin: auto;
+        text-transform: capitalize;
+        border: 0;
+        outline: 0;
+        color: #ffffff;
+        padding: 10px 40px;
+        font-size: 15px;
+        font-weight: normal;
+        border-radius: 1px;
+        cursor: pointer; }
+  body .latest {
+    background: #ffffff;
+    margin-left: -10px;
+    margin-right: -10px;
+    min-height: 600px;
+    padding: 45px 100px;
+    padding-right: 0;
+    position: relative;
+    text-align: center; }
+    @media only screen and (max-width: 320px) {
+      body .latest {
+        padding: 45px;
+        min-height: 1px; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body .latest {
+        padding: 45px;
+        min-height: 1px; } }
+    body .latest .card-big {
+      float: left;
+      margin-left: 70px; }
+      @media only screen and (max-width: 320px) {
+        body .latest .card-big {
+          float: none;
+          margin-bottom: 40px;
+          margin-left: 0; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .latest .card-big {
+          float: none;
+          margin-bottom: 40px;
+          margin-left: 0; } }
+      body .latest .card-big img {
+        width: 80%; }
+        @media only screen and (max-width: 320px) {
+          body .latest .card-big img {
+            width: 100%; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .latest .card-big img {
+            width: 100%; } }
+      body .latest .card-big figcaption h4 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 34px;
+        text-align: center;
+        text-transform: uppercase; }
+        @media only screen and (max-width: 320px) {
+          body .latest .card-big figcaption h4 {
+            margin: 0; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .latest .card-big figcaption h4 {
+            margin: 0; } }
+      body .latest .card-big figcaption a {
+        text-decoration: none;
+        font-size: 17px;
+        line-height: 28px;
+        color: #000000; }
+        body .latest .card-big figcaption a:hover {
+          text-decoration: none;
+          color: #b4777b; }
+        body .latest .card-big figcaption a span {
+          vertical-align: super; }
+  body .quote {
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    background: #ffffff;
+    font-size: 43px; }
+    @media only screen and (max-width: 320px) {
+      body .quote br {
+        display: none; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body .quote br {
+        display: none; } }
+    body .quote span {
+      border-bottom: 9px solid rgba(0, 0, 0, 0.06);
+      color: rgba(255, 255, 255, 0);
+      position: relative; }
+      @media only screen and (max-width: 320px) {
+        body .quote span {
+          display: none; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .quote span {
+          display: none; } }
+      body .quote span:first-of-type {
+        left: 170px;
+        top: -15px; }
+      body .quote span:last-of-type {
+        left: -200px;
+        top: -15px; }
+    body .quote img {
+      display: inline; }
+      body .quote img:first-of-type {
+        transform: rotate(10deg);
+        top: -35px;
+        position: relative;
+        left: 10px; }
+      body .quote img:last-of-type {
+        transform: rotate(-210deg);
+        top: -20px;
+        position: relative;
+        left: -10px; }
 
-@media only screen and (min-width: 321px) and (max-width: 1023px) {
-  #burger {
-    visibility: hidden; }
+/****************************
+overide carousel defaults
+****************************/
+.owl-nav {
+  position: absolute;
+  left: -41.5%;
+  top: 55%; }
+  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    .owl-nav {
+      position: relative;
+      left: 15%;
+      top: 0; } }
+  @media only screen and (max-width: 320px) {
+    .owl-nav {
+      position: relative;
+      left: 15%;
+      top: 0; } }
+  .owl-nav button {
+    color: #b4777b;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    height: 50px;
+    width: 50px;
+    margin-right: 45px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+    .owl-nav button:hover {
+      border: 1px solid #b4777b; }
+      .owl-nav button:hover em {
+        color: #b4777b; }
+    .owl-nav button:focus {
+      outline: 0; }
+    .owl-nav button em {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.5); }
 
+/***************************
+Handle Menu in mobile screens
+**********************************/
+#burger {
+  visibility: hidden; }
+
+@media only screen and (max-width: 768px) {
   input + label {
     position: fixed;
-    top: 40px;
-    right: 40px;
-    height: 20px;
-    width: 15px;
-    z-index: 5; }
+    top: 80px;
+    height: auto;
+    width: 100%;
+    z-index: 5;
+    font-size: 28px;
+    display: block;
+    margin: auto;
+    left: 10px; }
 
   label:hover {
     cursor: pointer; }
 
   input ~ nav {
     display: none;
-    position: fixed;
-    top: 10px;
+    position: fixed !important;
+    top: 80px;
     background: #ffffff;
-    z-index: 100; }
+    z-index: 100;
+    left: 0;
+    margin: auto;
+    padding: 0; }
     input ~ nav .toggle-div {
       position: relative; }
 
