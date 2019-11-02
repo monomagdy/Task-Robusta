@@ -514,7 +514,7 @@ body {
         border-radius: 1px;
         cursor: pointer; }
   body .latest {
-    background: #ffffff;
+    background: #f2f2f2;
     margin-left: -10px;
     margin-right: -10px;
     min-height: 600px;
@@ -522,6 +522,8 @@ body {
     padding-right: 0;
     position: relative;
     text-align: center; }
+    body .latest:last-of-type {
+      background: #f2f2f2; }
     @media only screen and (max-width: 320px) {
       body .latest {
         padding: 45px;
@@ -532,17 +534,20 @@ body {
         min-height: 1px; } }
     body .latest .card-big {
       float: left;
-      margin-left: 70px; }
+      margin-left: 60px;
+      width: 40%; }
       @media only screen and (max-width: 320px) {
         body .latest .card-big {
           float: none;
           margin-bottom: 40px;
-          margin-left: 0; } }
+          margin-left: 0;
+          width: 100%; } }
       @media only screen and (min-width: 321px) and (max-width: 1023px) {
         body .latest .card-big {
           float: none;
           margin-bottom: 40px;
-          margin-left: 0; } }
+          margin-left: 0;
+          width: 100%; } }
       body .latest .card-big img {
         width: 80%; }
         @media only screen and (max-width: 320px) {
@@ -574,12 +579,41 @@ body {
           color: #b4777b; }
         body .latest .card-big figcaption a span {
           vertical-align: super; }
+      body .latest .card-big span.line {
+        border-bottom: 9px solid #000000;
+        color: rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 70%;
+        right: 35%; }
+        @media only screen and (max-width: 320px) {
+          body .latest .card-big span.line {
+            display: none; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .latest .card-big span.line {
+            display: none; } }
+    body .latest em.circle {
+      border: 6px solid #000000;
+      padding: 38px;
+      border-radius: 50%;
+      position: absolute;
+      right: 9%;
+      top: 11%; }
+      @media only screen and (max-width: 320px) {
+        body .latest em.circle {
+          display: none; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .latest em.circle {
+          display: none; } }
+  body .latest.white {
+    background: #ffffff; }
   body .quote {
     position: relative;
     padding: 25px;
     text-align: center;
     background: #ffffff;
-    font-size: 43px; }
+    font-size: 43px;
+    margin-right: -10px;
+    margin-left: -10px; }
     @media only screen and (max-width: 320px) {
       body .quote br {
         display: none; } }
@@ -602,6 +636,12 @@ body {
       body .quote span:last-of-type {
         left: -200px;
         top: -15px; }
+    body .quote p {
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 34px;
+      text-align: center;
+      color: #cdc1c0; }
     body .quote img {
       display: inline; }
       body .quote img:first-of-type {
@@ -614,6 +654,255 @@ body {
         top: -20px;
         position: relative;
         left: -10px; }
+  body .vectoria {
+    background: #fbf9f9;
+    min-height: 560px;
+    padding: 35px;
+    margin-right: -10px;
+    margin-left: -10px; }
+    @media only screen and (max-width: 320px) {
+      body .vectoria {
+        min-height: 1px; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body .vectoria {
+        min-height: 1px; } }
+    body .vectoria .right-div {
+      width: 40%;
+      float: right;
+      padding: 25px;
+      text-align: left; }
+      @media only screen and (max-width: 320px) {
+        body .vectoria .right-div {
+          width: 100%;
+          float: none; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .vectoria .right-div {
+          width: 100%;
+          float: none; } }
+      body .vectoria .right-div h2 {
+        font-size: 43px;
+        line-height: 71px;
+        text-transform: uppercase; }
+      body .vectoria .right-div p {
+        font-size: 14px;
+        line-height: 23px; }
+      body .vectoria .right-div button {
+        background: #b4777b;
+        color: #ffffff;
+        border: none;
+        padding: 10px 15px; }
+    body .vectoria .left-div {
+      width: 55%;
+      float: left;
+      position: relative; }
+      @media only screen and (max-width: 320px) {
+        body .vectoria .left-div {
+          width: 100%;
+          float: none; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .vectoria .left-div {
+          width: 100%;
+          float: none; } }
+      body .vectoria .left-div img {
+        text-align: center;
+        margin: 0 15px;
+        width: 37%; }
+        @media only screen and (max-width: 320px) {
+          body .vectoria .left-div img {
+            width: 100%;
+            margin: 15px auto; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .vectoria .left-div img {
+            width: 100%;
+            margin: 15px auto; } }
+        body .vectoria .left-div img:first-of-type {
+          position: relative;
+          top: 65px; }
+          @media only screen and (max-width: 320px) {
+            body .vectoria .left-div img:first-of-type {
+              top: 0; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            body .vectoria .left-div img:first-of-type {
+              top: 0; } }
+      body .vectoria .left-div span {
+        border-bottom: 9px solid rgba(0, 0, 0, 0.06);
+        color: rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 61%;
+        left: 35%; }
+        @media only screen and (max-width: 320px) {
+          body .vectoria .left-div span {
+            display: none; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .vectoria .left-div span {
+            display: none; } }
+      body .vectoria .left-div h4 {
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 12.381px;
+        position: relative;
+        top: -15px;
+        z-index: 100;
+        text-align: center;
+        font-weight: normal; }
+    body .vectoria:last-of-type {
+      background: #ffffff; }
+      body .vectoria:last-of-type .left-div img.lady {
+        width: 60%;
+        z-index: 10;
+        float: right; }
+        @media only screen and (max-width: 320px) {
+          body .vectoria:last-of-type .left-div img.lady {
+            float: none;
+            width: 100%; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .vectoria:last-of-type .left-div img.lady {
+            float: none;
+            width: 100%; } }
+      body .vectoria:last-of-type .left-div img.mom {
+        width: 10%;
+        position: absolute;
+        left: 30%;
+        z-index: 100;
+        top: 42%; }
+      body .vectoria:last-of-type .left-div .rect {
+        position: absolute;
+        width: 50%;
+        height: 180px;
+        left: 55px;
+        top: 76%;
+        background: #d1cccb;
+        mix-blend-mode: normal;
+        opacity: 0.6; }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .vectoria:last-of-type .left-div .rect {
+            display: none; } }
+        @media only screen and (max-width: 320px) {
+          body .vectoria:last-of-type .left-div .rect {
+            display: none; } }
+  body .contact {
+    background: url("./img/bg.png") #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    margin: auto;
+    background-size: 95%;
+    text-align: center;
+    margin-right: -10px;
+    margin-left: -10px;
+    position: relative; }
+    @media only screen and (max-width: 320px) {
+      body .contact {
+        min-height: 1px;
+        background-size: cover; } }
+    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      body .contact {
+        min-height: 1px;
+        background-size: cover; } }
+    body .contact img.O {
+      position: absolute;
+      right: -15px; }
+    body .contact .line {
+      border: 2px solid rgba(255, 255, 255, 0.36);
+      color: rgba(255, 255, 255, 0);
+      position: absolute;
+      top: 90%;
+      left: -2%;
+      z-index: 100;
+      padding: 0;
+      height: 7.5px; }
+    body .contact .inner {
+      padding: 75px 150px; }
+      @media only screen and (max-width: 320px) {
+        body .contact .inner {
+          padding: 25px; } }
+      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        body .contact .inner {
+          padding: 25px; } }
+      body .contact .inner h2 {
+        font-size: 43px;
+        line-height: 1;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase; }
+      body .contact .inner p {
+        text-align: center;
+        color: #ffffff;
+        font-size: 21px;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 35px; }
+      body .contact .inner .select {
+        padding: 0 100px; }
+        @media only screen and (max-width: 320px) {
+          body .contact .inner .select {
+            padding: 25px; } }
+        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          body .contact .inner .select {
+            padding: 25px; } }
+        body .contact .inner .select .dropdown {
+          position: relative;
+          float: left;
+          margin-right: 5px; }
+          @media only screen and (max-width: 320px) {
+            body .contact .inner .select .dropdown {
+              float: none; } }
+          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            body .contact .inner .select .dropdown {
+              float: none; } }
+          body .contact .inner .select .dropdown:hover .dropdown-content {
+            display: block; }
+          body .contact .inner .select .dropdown .dropbtn {
+            background: #ffffff;
+            color: #000000;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px; }
+            body .contact .inner .select .dropdown .dropbtn em {
+              margin-left: 60px; }
+              @media only screen and (max-width: 320px) {
+                body .contact .inner .select .dropdown .dropbtn em {
+                  margin: 0 5px; } }
+              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                body .contact .inner .select .dropdown .dropbtn em {
+                  margin: 0 5px; } }
+            body .contact .inner .select .dropdown .dropbtn strong {
+              margin-right: 10px; }
+            @media only screen and (max-width: 320px) {
+              body .contact .inner .select .dropdown .dropbtn {
+                width: 100%;
+                margin: 5px auto; } }
+            @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              body .contact .inner .select .dropdown .dropbtn {
+                width: 100%;
+                margin: 5px auto; } }
+          body .contact .inner .select .dropdown .transperant {
+            background: rgba(255, 247, 247, 0.5); }
+          body .contact .inner .select .dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            margin-right: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1; }
+            body .contact .inner .select .dropdown .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block; }
+              body .contact .inner .select .dropdown .dropdown-content a:hover {
+                background-color: #f1f1f1; }
+        body .contact .inner .select .explore {
+          border: 0;
+          background: #b4777b;
+          color: #ffffff;
+          padding: 15px 75px;
+          border-radius: 1px;
+          cursor: pointer;
+          font-size: 18px; }
 
 /****************************
 overide carousel defaults

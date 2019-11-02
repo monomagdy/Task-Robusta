@@ -609,7 +609,7 @@ body {
   Latest Section
  *****************/
   .latest {
-    background: $white-color;
+    background: $dark-white;
     margin-left: -10px;
     margin-right: -10px;
     min-height: 600px;
@@ -617,6 +617,9 @@ body {
     padding-right: 0;
     position: relative;
     text-align: center;
+    &:last-of-type {
+      background: $dark-white;
+    }
     @include respond-to(handhelds) {
       padding: 45px;
       min-height: 1px;
@@ -627,16 +630,19 @@ body {
     }
     .card-big {
       float: left;
-      margin-left: 70px;
+      margin-left: 60px;
+      width: 40%;
       @include respond-to(handhelds) {
         float: none;
         margin-bottom: 40px;
         margin-left: 0;
+        width: 100%;
       }
       @include respond-to(medium-screens) {
         float: none;
         margin-bottom: 40px;
         margin-left: 0;
+        width: 100%;
       }
       img {
         width: 80%;
@@ -647,6 +653,7 @@ body {
           width: 100%;
         }
       }
+
       figcaption {
         h4 {
           font-style: normal;
@@ -676,7 +683,37 @@ body {
           }
         }
       }
+      span.line {
+        border-bottom: 9px solid $black-color;
+        color: rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 70%;
+        right: 35%;
+        @include respond-to(handhelds) {
+          display: none;
+        }
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+      }
     }
+    em.circle {
+      border: 6px solid $black-color;
+      padding: 38px;
+      border-radius: 50%;
+      position: absolute;
+      right: 9%;
+      top: 11%;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
+    }
+  }
+  .latest.white {
+    background: $white-color;
   }
   /*****************
   end of Latest Section
@@ -687,6 +724,8 @@ body {
     text-align: center;
     background: $white-color;
     font-size: 43px;
+    margin-right: -10px;
+    margin-left: -10px;
     br {
       @include respond-to(handhelds) {
         display: none;
@@ -714,6 +753,14 @@ body {
         top: -15px;
       }
     }
+    p {
+      font-weight: normal;
+      font-size: 21px;
+      line-height: 34px;
+      text-align: center;
+
+      color: #cdc1c0;
+    }
     img {
       display: inline;
       &:first-of-type {
@@ -729,6 +776,292 @@ body {
         left: -10px;
       }
     }
+  }
+  .vectoria {
+    background: #fbf9f9;
+    min-height: 560px;
+    padding: 35px;
+    margin-right: -10px;
+    margin-left: -10px;
+    @include respond-to(handhelds) {
+      min-height: 1px;
+    }
+    @include respond-to(medium-screens) {
+      min-height: 1px;
+    }
+    .right-div {
+      width: 40%;
+      float: right;
+      padding: 25px;
+      text-align: left;
+      @include respond-to(handhelds) {
+        width: 100%;
+        float: none;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        float: none;
+      }
+      h2 {
+        font-size: 43px;
+        line-height: 71px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 14px;
+        line-height: 23px;
+      }
+      button {
+        background: $theme-color;
+        color: $white-color;
+        border: none;
+        padding: 10px 15px;
+      }
+    }
+    .left-div {
+      width: 55%;
+      float: left;
+      position: relative;
+      @include respond-to(handhelds) {
+        width: 100%;
+        float: none;
+      }
+      @include respond-to(medium-screens) {
+        width: 100%;
+        float: none;
+      }
+      img {
+        text-align: center;
+        margin: 0 15px;
+        width: 37%;
+        @include respond-to(handhelds) {
+          width: 100%;
+          margin: 15px auto;
+        }
+        @include respond-to(medium-screens) {
+          width: 100%;
+          margin: 15px auto;
+        }
+        &:first-of-type {
+          position: relative;
+          top: 65px;
+          @include respond-to(handhelds) {
+            top: 0;
+          }
+          @include respond-to(medium-screens) {
+            top: 0;
+          }
+        }
+      }
+      span {
+        border-bottom: 9px solid rgba($black-color, 0.06);
+        color: rgba($white-color, 0);
+        position: absolute;
+        top: 61%;
+        left: 35%;
+        @include respond-to(handhelds) {
+          display: none;
+        }
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+      }
+      h4 {
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 12.381px;
+        position: relative;
+        top: -15px;
+        z-index: 100;
+        text-align: center;
+        font-weight: normal;
+      }
+    }
+    &:last-of-type {
+      background: $white-color;
+      .left-div {
+        img.lady {
+          width: 60%;
+          z-index: 10;
+          float: right;
+          @include respond-to(handhelds) {
+            float: none;
+            width: 100%;
+          }
+          @include respond-to(medium-screens) {
+            float: none;
+            width: 100%;
+          }
+        }
+        img.mom {
+          width: 10%;
+          position: absolute;
+          left: 30%;
+          z-index: 100;
+          top: 42%;
+        }
+        .rect {
+          position: absolute;
+          width: 50%;
+          height: 180px;
+          left: 55px;
+          top: 76%;
+          background: #d1cccb;
+          mix-blend-mode: normal;
+          opacity: 0.6;
+          @include respond-to(medium-screens) {
+            display: none;
+          }
+          @include respond-to(handhelds) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .contact {
+    background: url("./img/bg.png") $white-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    margin: auto;
+    background-size: 95%;
+    text-align: center;
+    margin-right: -10px;
+    margin-left: -10px;
+    position: relative;
+    @include respond-to(handhelds) {
+      min-height: 1px;
+      background-size: cover;
+    }
+    @include respond-to(medium-screens) {
+      min-height: 1px;
+      background-size: cover;
+    }
+    img.O {
+      position: absolute;
+      right: -15px;
+    }
+    .line {
+      border: 2px solid rgba(255, 255, 255, 0.36);
+      color: rgba(255, 255, 255, 0);
+      position: absolute;
+      top: 90%;
+      left: -2%;
+      z-index: 100;
+      padding: 0;
+      height: 7.5px;
+    }
+    .inner {
+      padding: 75px 150px;
+      @include respond-to(handhelds) {
+        padding: 25px;
+      }
+      @include respond-to(medium-screens) {
+        padding: 25px;
+      }
+      h2 {
+        font-size: 43px;
+        line-height: 1;
+        text-align: center;
+        color: $white-color;
+        text-transform: uppercase;
+      }
+      p {
+        text-align: center;
+        color: $white-color;
+        font-size: 21px;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 35px;
+      }
+      .select {
+        padding: 0 100px;
+        @include respond-to(handhelds) {
+          padding: 25px;
+        }
+        @include respond-to(medium-screens) {
+          padding: 25px;
+        }
+        .dropdown {
+          position: relative;
+          float: left;
+          margin-right: 5px;
+          @include respond-to(handhelds) {
+            float: none;
+          }
+          @include respond-to(medium-screens) {
+            float: none;
+          }
+          &:hover {
+            .dropdown-content {
+              display: block;
+            }
+          }
+          .dropbtn {
+            background: $white-color;
+            color: $black-color;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            em {
+              margin-left: 60px;
+              @include respond-to(handhelds) {
+                margin: 0 5px;
+              }
+              @include respond-to(medium-screens) {
+                margin: 0 5px;
+              }
+            }
+            strong {
+              margin-right: 10px;
+            }
+            @include respond-to(handhelds) {
+              width: 100%;
+              margin: 5px auto;
+            }
+            @include respond-to(medium-screens) {
+              width: 100%;
+              margin: 5px auto;
+            }
+          }
+          .transperant {
+            background: rgba(255, 247, 247, 0.5);
+          }
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 100%;
+            margin-right: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #f1f1f1;
+              }
+            }
+          }
+        }
+        .explore {
+          border: 0;
+          background: $theme-color;
+          color: $white-color;
+          padding: 15px 75px;
+          border-radius: 1px;
+          cursor: pointer;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .shop-now {
   }
 }
 
