@@ -91,6 +91,8 @@ body {
         list-style: none; }
         body .second-header .top-left ul li {
           display: inline; }
+          body .second-header .top-left ul li:hover .dropdown-content {
+            display: block; }
           body .second-header .top-left ul li a {
             color: #000000;
             text-decoration: none; }
@@ -101,6 +103,31 @@ body {
           body .second-header .top-left ul li em {
             margin: 0 5px;
             font-size: 13px; }
+          body .second-header .top-left ul li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: inherit;
+            margin-right: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1; }
+            @media only screen and (max-width: 768px) {
+              body .second-header .top-left ul li .dropdown-content {
+                width: 50%;
+                margin: auto;
+                left: 30%; } }
+            @media only screen and (max-width: 320px) {
+              body .second-header .top-left ul li .dropdown-content {
+                width: 50%;
+                margin: auto;
+                left: 30%; } }
+            body .second-header .top-left ul li .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block; }
+              body .second-header .top-left ul li .dropdown-content a:hover {
+                background-color: #f1f1f1; }
     body .second-header .logo {
       position: absolute;
       width: 30%;
@@ -160,6 +187,8 @@ body {
             float: none; } }
         body .second-header .top-right ul.my-account li {
           display: inline; }
+          body .second-header .top-right ul.my-account li:hover .dropdown-content {
+            display: block; }
           body .second-header .top-right ul.my-account li a {
             color: #000000;
             text-decoration: none; }
@@ -170,6 +199,31 @@ body {
           body .second-header .top-right ul.my-account li em {
             margin: 0 5px;
             font-size: 13px; }
+          body .second-header .top-right ul.my-account li .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: inherit;
+            margin-right: 5px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1; }
+            @media only screen and (max-width: 768px) {
+              body .second-header .top-right ul.my-account li .dropdown-content {
+                width: 50%;
+                margin: auto;
+                left: 30%; } }
+            @media only screen and (max-width: 320px) {
+              body .second-header .top-right ul.my-account li .dropdown-content {
+                width: 50%;
+                margin: auto;
+                left: 30%; } }
+            body .second-header .top-right ul.my-account li .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block; }
+              body .second-header .top-right ul.my-account li .dropdown-content a:hover {
+                background-color: #f1f1f1; }
       body .second-header .top-right ul.actions {
         list-style: none;
         float: right; }
@@ -1348,7 +1402,7 @@ Handle Menu in mobile screens
     position: absolute;
     top: 80px;
     height: auto;
-    width: 100%;
+    width: auto;
     z-index: 5;
     font-size: 28px;
     display: block;
