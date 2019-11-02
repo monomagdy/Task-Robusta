@@ -1,5 +1,9 @@
 /*
+
+
 @include respond-to(handhelds) {
+      }
+      @include respond-to(wide-screens) {
       }
       @include respond-to(medium-screens) {
       }
@@ -40,7 +44,7 @@ body {
     @media only screen and (max-width: 320px) {
       body .first-header {
         position: relative; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .first-header {
         position: relative; } }
     body .first-header h2 {
@@ -64,7 +68,7 @@ body {
         top: 0;
         text-align: center;
         padding-top: 5px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .second-header {
         position: relative;
         top: 0;
@@ -78,7 +82,7 @@ body {
           width: 100%;
           float: none;
           position: relative; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .second-header .top-left {
           width: 100%;
           float: none;
@@ -122,7 +126,7 @@ body {
           top: 0;
           height: auto;
           padding: 15px; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .second-header .logo {
           width: 100%;
           float: none;
@@ -140,7 +144,7 @@ body {
           width: 100%;
           float: none;
           position: relative; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .second-header .top-right {
           width: 100%;
           float: none;
@@ -151,7 +155,7 @@ body {
         @media only screen and (max-width: 320px) {
           body .second-header .top-right ul.my-account {
             float: none; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .second-header .top-right ul.my-account {
             float: none; } }
         body .second-header .top-right ul.my-account li {
@@ -173,7 +177,7 @@ body {
           body .second-header .top-right ul.actions {
             float: none;
             padding-top: 15px; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .second-header .top-right ul.actions {
             float: none;
             padding-top: 15px; } }
@@ -205,8 +209,12 @@ body {
     @media only screen and (max-width: 320px) {
       body .container {
         width: 100%; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .container {
+        width: 100%; } }
+    @media only screen and (max-width: 1025px) {
+      body .container {
+        padding: 0;
         width: 100%; } }
   body section.menu {
     min-height: 110px;
@@ -216,7 +224,7 @@ body {
     @media only screen and (max-width: 320px) {
       body section.menu {
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body section.menu {
         min-height: 1px; } }
     body section.menu nav {
@@ -230,7 +238,7 @@ body {
           padding: 0;
           margin-left: 0;
           margin-right: 0; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body section.menu nav {
           text-align: left;
           border: 1px solid #b5797d;
@@ -239,17 +247,23 @@ body {
           margin-right: 0; } }
       body section.menu nav .menu-list {
         list-style: none; }
+        @media only screen and (max-width: 1025px) {
+          body section.menu nav .menu-list {
+            text-align: left; } }
         body section.menu nav .menu-list li.menu-item {
           display: inline-block;
           margin: 0 20px;
         /*  &:hover > .toggle-div {
         display: block !important;
       }*/ }
+          @media only screen and (max-width: 1025px) {
+            body section.menu nav .menu-list li.menu-item {
+              margin: 0 10px; } }
           @media only screen and (max-width: 320px) {
             body section.menu nav .menu-list li.menu-item {
               display: block;
               margin: 20px; } }
-          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          @media only screen and (max-width: 768px) {
             body section.menu nav .menu-list li.menu-item {
               display: block;
               margin: 20px; } }
@@ -282,7 +296,7 @@ body {
               text-align: left;
               left: 100px;
               top: 50px; }
-              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              @media only screen and (max-width: 768px) {
                 body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu {
                   background: #b4777b;
                   color: #ffffff;
@@ -306,7 +320,7 @@ body {
                 margin: 10px 0;
                 float: left;
                 width: 55%; }
-                @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                @media only screen and (max-width: 768px) {
                   body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li {
                     float: none;
                     width: auto;
@@ -325,7 +339,7 @@ body {
                   body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a:hover {
                     color: #b4777b;
                     text-decoration: none; }
-                  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                  @media only screen and (max-width: 768px) {
                     body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu li a {
                       color: #ffffff; } }
                   @media only screen and (max-width: 320px) {
@@ -337,7 +351,7 @@ body {
               left: 300px;
               text-align: left;
               top: 50px; }
-              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              @media only screen and (max-width: 768px) {
                 body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two {
                   background: #b4777b;
                   color: #ffffff;
@@ -361,7 +375,7 @@ body {
                 margin: 10px 0;
                 float: left;
                 width: 34%; }
-                @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                @media only screen and (max-width: 768px) {
                   body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li {
                     float: none;
                     width: auto;
@@ -380,7 +394,7 @@ body {
                   body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a:hover {
                     color: #b4777b;
                     text-decoration: none; }
-                  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+                  @media only screen and (max-width: 768px) {
                     body section.menu nav .menu-list li.menu-item .toggle-div .sub-menu-two li a {
                       color: #ffffff; } }
                   @media only screen and (max-width: 320px) {
@@ -390,7 +404,7 @@ body {
               position: absolute;
               right: 300px;
               top: 50px; }
-              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              @media only screen and (max-width: 768px) {
                 body section.menu nav .menu-list li.menu-item .toggle-div .card {
                   display: none; } }
               @media only screen and (max-width: 320px) {
@@ -417,14 +431,14 @@ body {
     @media only screen and (max-width: 320px) {
       body section.landing {
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body section.landing {
         min-height: 1px; } }
     body section.landing .carousel-container {
       width: 60%;
       float: right;
       position: relative; }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body section.landing .carousel-container {
           float: none;
           margin: auto; } }
@@ -437,7 +451,7 @@ body {
         @media only screen and (max-width: 320px) {
           body section.landing .carousel-container .owl-carousel div img {
             width: 100%; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body section.landing .carousel-container .owl-carousel div img {
             width: 100%; } }
       body section.landing .carousel-container .rect {
@@ -449,7 +463,7 @@ body {
         background: #d1cccb;
         mix-blend-mode: normal;
         opacity: 0.6; }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body section.landing .carousel-container .rect {
             display: none; } }
         @media only screen and (max-width: 320px) {
@@ -459,7 +473,7 @@ body {
       float: left;
       width: 40%;
       text-align: center; }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body section.landing .carousel-side {
           width: 100%;
           margin-bottom: 45px; } }
@@ -471,7 +485,7 @@ body {
         letter-spacing: 12.381px;
         text-transform: capitalize;
         font-weight: normal; }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body section.landing .carousel-side h4 {
             font-size: 25px; } }
         @media only screen and (max-width: 320px) {
@@ -484,7 +498,7 @@ body {
           position: absolute;
           left: 30%;
           z-index: 10; }
-          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          @media only screen and (max-width: 768px) {
             body section.landing .carousel-side h4 span {
               display: none; } }
           @media only screen and (max-width: 320px) {
@@ -496,7 +510,7 @@ body {
         font-size: 50px;
         line-height: 82px;
         text-transform: uppercase; }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body section.landing .carousel-side h1 {
             font-size: 36px; } }
         @media only screen and (max-width: 320px) {
@@ -526,11 +540,15 @@ body {
     text-align: center; }
     body .latest:last-of-type {
       background: #f2f2f2; }
+    @media only screen and (max-width: 1025px) {
+      body .latest {
+        padding: 15px;
+        min-height: 400px; } }
     @media only screen and (max-width: 320px) {
       body .latest {
         padding: 45px;
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .latest {
         padding: 45px;
         min-height: 1px; } }
@@ -538,13 +556,17 @@ body {
       float: left;
       margin-left: 60px;
       width: 40%; }
+      @media only screen and (max-width: 1025px) {
+        body .latest .card-big {
+          margin-left: 0;
+          width: 45%; } }
       @media only screen and (max-width: 320px) {
         body .latest .card-big {
           float: none;
           margin-bottom: 40px;
           margin-left: 0;
           width: 100%; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .latest .card-big {
           float: none;
           margin-bottom: 40px;
@@ -555,7 +577,7 @@ body {
         @media only screen and (max-width: 320px) {
           body .latest .card-big img {
             width: 100%; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .latest .card-big img {
             width: 100%; } }
       body .latest .card-big figcaption h4 {
@@ -568,7 +590,7 @@ body {
         @media only screen and (max-width: 320px) {
           body .latest .card-big figcaption h4 {
             margin: 0; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .latest .card-big figcaption h4 {
             margin: 0; } }
       body .latest .card-big figcaption a {
@@ -590,7 +612,7 @@ body {
         @media only screen and (max-width: 320px) {
           body .latest .card-big span.line {
             display: none; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .latest .card-big span.line {
             display: none; } }
     body .latest em.circle {
@@ -603,7 +625,7 @@ body {
       @media only screen and (max-width: 320px) {
         body .latest em.circle {
           display: none; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .latest em.circle {
           display: none; } }
   body .latest.white {
@@ -619,7 +641,7 @@ body {
     @media only screen and (max-width: 320px) {
       body .quote br {
         display: none; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .quote br {
         display: none; } }
     body .quote span {
@@ -629,7 +651,7 @@ body {
       @media only screen and (max-width: 320px) {
         body .quote span {
           display: none; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .quote span {
           display: none; } }
       body .quote span:first-of-type {
@@ -665,7 +687,7 @@ body {
     @media only screen and (max-width: 320px) {
       body .vectoria {
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .vectoria {
         min-height: 1px; } }
     body .vectoria .right-div {
@@ -677,10 +699,13 @@ body {
         body .vectoria .right-div {
           width: 100%;
           float: none; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .vectoria .right-div {
           width: 100%;
           float: none; } }
+      @media only screen and (max-width: 1025px) {
+        body .vectoria .right-div {
+          padding: 0; } }
       body .vectoria .right-div h2 {
         font-size: 43px;
         line-height: 71px;
@@ -701,7 +726,7 @@ body {
         body .vectoria .left-div {
           width: 100%;
           float: none; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .vectoria .left-div {
           width: 100%;
           float: none; } }
@@ -713,7 +738,7 @@ body {
           body .vectoria .left-div img {
             width: 100%;
             margin: 15px auto; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .vectoria .left-div img {
             width: 100%;
             margin: 15px auto; } }
@@ -723,7 +748,7 @@ body {
           @media only screen and (max-width: 320px) {
             body .vectoria .left-div img:first-of-type {
               top: 0; } }
-          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          @media only screen and (max-width: 768px) {
             body .vectoria .left-div img:first-of-type {
               top: 0; } }
       body .vectoria .left-div span {
@@ -735,7 +760,7 @@ body {
         @media only screen and (max-width: 320px) {
           body .vectoria .left-div span {
             display: none; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .vectoria .left-div span {
             display: none; } }
       body .vectoria .left-div h4 {
@@ -757,7 +782,7 @@ body {
           body .vectoria:last-of-type .left-div img.lady {
             float: none;
             width: 100%; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .vectoria:last-of-type .left-div img.lady {
             float: none;
             width: 100%; } }
@@ -776,7 +801,7 @@ body {
         background: #d1cccb;
         mix-blend-mode: normal;
         opacity: 0.6; }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .vectoria:last-of-type .left-div .rect {
             display: none; } }
         @media only screen and (max-width: 320px) {
@@ -797,13 +822,19 @@ body {
       body .contact {
         min-height: 1px;
         background-size: cover; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .contact {
         min-height: 1px;
         background-size: cover; } }
     body .contact img.O {
       position: absolute;
       right: -15px; }
+      @media only screen and (max-width: 320px) {
+        body .contact img.O {
+          display: none; } }
+      @media only screen and (max-width: 768px) {
+        body .contact img.O {
+          display: none; } }
     body .contact .line {
       border: 2px solid rgba(255, 255, 255, 0.36);
       color: rgba(255, 255, 255, 0);
@@ -813,12 +844,18 @@ body {
       z-index: 100;
       padding: 0;
       height: 7.5px; }
+      @media only screen and (max-width: 320px) {
+        body .contact .line {
+          display: none; } }
+      @media only screen and (max-width: 768px) {
+        body .contact .line {
+          display: none; } }
     body .contact .inner {
       padding: 75px 150px; }
       @media only screen and (max-width: 320px) {
         body .contact .inner {
           padding: 25px; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .contact .inner {
           padding: 25px; } }
       body .contact .inner h2 {
@@ -836,22 +873,30 @@ body {
         margin-bottom: 35px; }
       body .contact .inner .select {
         padding: 0 100px; }
+        @media only screen and (max-width: 1025px) {
+          body .contact .inner .select {
+            padding: 0; } }
         @media only screen and (max-width: 320px) {
           body .contact .inner .select {
             padding: 25px; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+        @media only screen and (max-width: 768px) {
           body .contact .inner .select {
             padding: 25px; } }
         body .contact .inner .select .dropdown {
           position: relative;
           float: left;
           margin-right: 5px; }
+          @media only screen and (max-width: 1025px) {
+            body .contact .inner .select .dropdown {
+              width: 50%; } }
           @media only screen and (max-width: 320px) {
             body .contact .inner .select .dropdown {
-              float: none; } }
-          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              float: none;
+              width: 100%; } }
+          @media only screen and (max-width: 768px) {
             body .contact .inner .select .dropdown {
-              float: none; } }
+              float: none;
+              width: 100%; } }
           body .contact .inner .select .dropdown:hover .dropdown-content {
             display: block; }
           body .contact .inner .select .dropdown .dropbtn {
@@ -862,12 +907,15 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 3px; }
+            @media only screen and (max-width: 1025px) {
+              body .contact .inner .select .dropdown .dropbtn {
+                width: 100%; } }
             body .contact .inner .select .dropdown .dropbtn em {
               margin-left: 60px; }
               @media only screen and (max-width: 320px) {
                 body .contact .inner .select .dropdown .dropbtn em {
                   margin: 0 5px; } }
-              @media only screen and (min-width: 321px) and (max-width: 1023px) {
+              @media only screen and (max-width: 768px) {
                 body .contact .inner .select .dropdown .dropbtn em {
                   margin: 0 5px; } }
             body .contact .inner .select .dropdown .dropbtn strong {
@@ -876,7 +924,7 @@ body {
               body .contact .inner .select .dropdown .dropbtn {
                 width: 100%;
                 margin: 5px auto; } }
-            @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            @media only screen and (max-width: 768px) {
               body .contact .inner .select .dropdown .dropbtn {
                 width: 100%;
                 margin: 5px auto; } }
@@ -914,7 +962,7 @@ body {
     @media only screen and (max-width: 320px) {
       body .shop-now {
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body .shop-now {
         min-height: 1px; } }
     body .shop-now h5 {
@@ -927,6 +975,12 @@ body {
       font-size: 20px;
       line-height: 33px;
       letter-spacing: 12.381px; }
+      @media only screen and (max-width: 320px) {
+        body .shop-now h6 {
+          display: none; } }
+      @media only screen and (max-width: 768px) {
+        body .shop-now h6 {
+          display: none; } }
       body .shop-now h6 span {
         vertical-align: super;
         letter-spacing: 0;
@@ -941,12 +995,16 @@ body {
       position: relative;
       float: left;
       margin: 0 38px; }
+      @media only screen and (max-width: 1025px) {
+        body .shop-now .tile {
+          width: 22%;
+          margin: 0 15px; } }
       @media only screen and (max-width: 320px) {
         body .shop-now .tile {
           margin: 10px auto;
           width: 100%;
           float: none; } }
-      @media only screen and (min-width: 321px) and (max-width: 1023px) {
+      @media only screen and (max-width: 768px) {
         body .shop-now .tile {
           margin: 10px auto;
           width: 100%;
@@ -963,6 +1021,11 @@ body {
         position: absolute;
         overflow: hidden;
         text-align: center; }
+        @media only screen and (max-width: 1025px) {
+          body .shop-now .tile .front,
+          body .shop-now .tile .back {
+            height: auto;
+            position: relative; } }
       body .shop-now .tile h3,
       body .shop-now .tile p,
       body .shop-now .tile a {
@@ -973,6 +1036,11 @@ body {
         z-index: 2; }
         body .shop-now .tile .front img {
           height: 350px; }
+          @media only screen and (max-width: 1025px) {
+            body .shop-now .tile .front img {
+              height: auto;
+              width: auto;
+              margin: 15px 0; } }
         body .shop-now .tile .front h3 {
           font-size: 2em;
           color: #ffffff;
@@ -1005,7 +1073,7 @@ body {
           @media only screen and (max-width: 320px) {
             body .shop-now .tile .back a {
               margin: 100px auto; } }
-          @media only screen and (min-width: 321px) and (max-width: 1023px) {
+          @media only screen and (max-width: 768px) {
             body .shop-now .tile .back a {
               margin: 100px auto; } }
           body .shop-now .tile .back a span {
@@ -1022,10 +1090,13 @@ body {
     padding: 35px;
     min-height: 400px;
     border-top: 10px solid #ffffff; }
+    @media only screen and (max-width: 1025px) {
+      body footer {
+        min-height: 550px; } }
     @media only screen and (max-width: 320px) {
       body footer {
         min-height: 1px; } }
-    @media only screen and (min-width: 321px) and (max-width: 1023px) {
+    @media only screen and (max-width: 768px) {
       body footer {
         min-height: 1px; } }
     body footer .footer .footer-list {
@@ -1034,6 +1105,21 @@ body {
       float: left;
       margin: auto;
       margin-right: 35px; }
+      @media only screen and (max-width: 1025px) {
+        body footer .footer .footer-list {
+          float: left;
+          width: 29%;
+          margin-right: 30px; } }
+      @media only screen and (max-width: 320px) {
+        body footer .footer .footer-list {
+          float: none;
+          width: 100%;
+          clear: both; } }
+      @media only screen and (max-width: 768px) {
+        body footer .footer .footer-list {
+          float: none;
+          width: 100%;
+          clear: both; } }
       body footer .footer .footer-list h3 {
         font-style: normal;
         font-weight: bold;
@@ -1042,12 +1128,24 @@ body {
         text-align: left;
         margin-left: 25px;
         position: relative; }
+        @media only screen and (max-width: 320px) {
+          body footer .footer .footer-list h3 {
+            margin: 25px 0; } }
+        @media only screen and (max-width: 768px) {
+          body footer .footer .footer-list h3 {
+            margin: 25px 0; } }
         body footer .footer .footer-list h3 span {
           border-bottom: 10px solid rgba(0, 0, 0, 0.06);
           color: rgba(255, 255, 255, 0);
           position: absolute;
           top: -9px;
           left: -20px; }
+          @media only screen and (max-width: 320px) {
+            body footer .footer .footer-list h3 span {
+              display: none; } }
+          @media only screen and (max-width: 768px) {
+            body footer .footer .footer-list h3 span {
+              display: none; } }
       body footer .footer .footer-list ul {
         list-style: none; }
         body footer .footer .footer-list ul li {
@@ -1095,12 +1193,33 @@ body {
       text-align: center; }
       body footer .second-footer .footer-list ul li {
         float: none;
-        text-align: center; }
+        text-align: center;
+        width: 100%;
+        padding: 0; }
+        @media only screen and (max-width: 1025px) {
+          body footer .second-footer .footer-list ul li {
+            margin: auto; } }
+        @media only screen and (max-width: 320px) {
+          body footer .second-footer .footer-list ul li {
+            margin-bottom: 40px;
+            padding: 0; } }
+        @media only screen and (max-width: 768px) {
+          body footer .second-footer .footer-list ul li {
+            margin-bottom: 40px;
+            padding: 0; } }
       body footer .second-footer .footer-list p {
         display: inline;
         font-weight: normal;
         font-size: 14px;
         line-height: 23px; }
+        @media only screen and (max-width: 320px) {
+          body footer .second-footer .footer-list p {
+            display: block;
+            text-align: center; } }
+        @media only screen and (max-width: 768px) {
+          body footer .second-footer .footer-list p {
+            display: block;
+            text-align: center; } }
       body footer .second-footer .footer-list a {
         text-decoration: none;
         color: #000000;
@@ -1113,15 +1232,14 @@ body {
         display: inline; }
         @media only screen and (max-width: 320px) {
           body footer .second-footer .footer-list ul.social {
-            float: none;
-            padding-top: 15px; } }
-        @media only screen and (min-width: 321px) and (max-width: 1023px) {
+            display: block; } }
+        @media only screen and (max-width: 768px) {
           body footer .second-footer .footer-list ul.social {
-            float: none;
-            padding-top: 15px; } }
+            display: block; } }
         body footer .second-footer .footer-list ul.social li {
           display: inline-block;
-          width: auto; }
+          width: auto;
+          text-align: center; }
           body footer .second-footer .footer-list ul.social li a {
             color: #b4777b;
             border: 2px solid #b4777b;
@@ -1147,16 +1265,19 @@ overide carousel defaults
   position: absolute;
   left: -41.5%;
   top: 55%; }
-  @media only screen and (min-width: 321px) and (max-width: 1023px) {
+  @media only screen and (max-width: 1025px) {
+    .owl-nav {
+      left: -45.5%;
+      top: 65%; } }
+  @media only screen and (max-width: 768px) {
     .owl-nav {
       position: relative;
       left: 15%;
       top: 0; } }
   @media only screen and (max-width: 320px) {
     .owl-nav {
-      position: relative;
-      left: 15%;
-      top: 0; } }
+      left: -45.5%;
+      top: 64%; } }
   .owl-nav button {
     color: #b4777b;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -1166,6 +1287,10 @@ overide carousel defaults
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 10px; }
+    @media only screen and (max-width: 1025px) {
+      .owl-nav button {
+        height: 45px;
+        width: 45px; } }
     .owl-nav button:hover {
       border: 1px solid #b4777b; }
       .owl-nav button:hover em {

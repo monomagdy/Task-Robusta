@@ -4,6 +4,7 @@ $theme-color: #b4777b;
 $dark-white: #f2f2f2;
 $break-small: 320px;
 $break-large: 1024px;
+$break-med: 768px;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
@@ -11,18 +12,22 @@ $break-large: 1024px;
       @content;
     }
   } @else if $media == medium-screens {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) {
+    @media only screen and (max-width: $break-med) {
       @content;
     }
   } @else if $media == wide-screens {
-    @media only screen and (min-width: $break-large) {
+    @media only screen and (max-width: $break-large + 1) {
       @content;
     }
   }
 }
 
 /*
+
+
 @include respond-to(handhelds) {
+      }
+      @include respond-to(wide-screens) {
       }
       @include respond-to(medium-screens) {
       }
@@ -241,6 +246,10 @@ body {
     @include respond-to(medium-screens) {
       width: 100%;
     }
+    @include respond-to(wide-screens) {
+      padding: 0;
+      width: 100%;
+    }
   }
   /*************
   Menu Start
@@ -277,10 +286,15 @@ body {
 
       .menu-list {
         list-style: none;
-
+        @include respond-to(wide-screens) {
+          text-align: left;
+        }
         li.menu-item {
           display: inline-block;
           margin: 0 20px;
+          @include respond-to(wide-screens) {
+            margin: 0 10px;
+          }
           @include respond-to(handhelds) {
             display: block;
             margin: 20px;
@@ -289,6 +303,7 @@ body {
             display: block;
             margin: 20px;
           }
+
           &:last-of-type {
             a {
               background: $black-color;
@@ -624,6 +639,10 @@ body {
     &:last-of-type {
       background: $dark-white;
     }
+    @include respond-to(wide-screens) {
+      padding: 15px;
+      min-height: 400px;
+    }
     @include respond-to(handhelds) {
       padding: 45px;
       min-height: 1px;
@@ -632,10 +651,15 @@ body {
       padding: 45px;
       min-height: 1px;
     }
+
     .card-big {
       float: left;
       margin-left: 60px;
       width: 40%;
+      @include respond-to(wide-screens) {
+        margin-left: 0;
+        width: 45%;
+      }
       @include respond-to(handhelds) {
         float: none;
         margin-bottom: 40px;
@@ -648,6 +672,7 @@ body {
         margin-left: 0;
         width: 100%;
       }
+
       img {
         width: 80%;
         @include respond-to(handhelds) {
@@ -806,6 +831,9 @@ body {
         width: 100%;
         float: none;
       }
+      @include respond-to(wide-screens) {
+        padding: 0;
+      }
       h2 {
         font-size: 43px;
         line-height: 71px;
@@ -945,6 +973,12 @@ body {
     img.O {
       position: absolute;
       right: -15px;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
     }
     .line {
       border: 2px solid rgba(255, 255, 255, 0.36);
@@ -955,6 +989,12 @@ body {
       z-index: 100;
       padding: 0;
       height: 7.5px;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
     }
     .inner {
       padding: 75px 150px;
@@ -981,21 +1021,30 @@ body {
       }
       .select {
         padding: 0 100px;
+        @include respond-to(wide-screens) {
+          padding: 0;
+        }
         @include respond-to(handhelds) {
           padding: 25px;
         }
         @include respond-to(medium-screens) {
           padding: 25px;
         }
+
         .dropdown {
           position: relative;
           float: left;
           margin-right: 5px;
+          @include respond-to(wide-screens) {
+            width: 50%;
+          }
           @include respond-to(handhelds) {
             float: none;
+            width: 100%;
           }
           @include respond-to(medium-screens) {
             float: none;
+            width: 100%;
           }
           &:hover {
             .dropdown-content {
@@ -1010,6 +1059,9 @@ body {
             border: none;
             cursor: pointer;
             border-radius: 3px;
+            @include respond-to(wide-screens) {
+              width: 100%;
+            }
             em {
               margin-left: 60px;
               @include respond-to(handhelds) {
@@ -1088,6 +1140,12 @@ body {
       font-size: 20px;
       line-height: 33px;
       letter-spacing: 12.381px;
+      @include respond-to(handhelds) {
+        display: none;
+      }
+      @include respond-to(medium-screens) {
+        display: none;
+      }
       span {
         vertical-align: super;
         letter-spacing: 0;
@@ -1105,6 +1163,10 @@ body {
       position: relative;
       float: left;
       margin: 0 38px;
+      @include respond-to(wide-screens) {
+        width: 22%;
+        margin: 0 15px;
+      }
       @include respond-to(handhelds) {
         margin: 10px auto;
         width: 100%;
@@ -1127,6 +1189,10 @@ body {
         position: absolute;
         overflow: hidden;
         text-align: center;
+        @include respond-to(wide-screens) {
+          height: auto;
+          position: relative;
+        }
       }
       h3,
       p,
@@ -1140,6 +1206,11 @@ body {
         z-index: 2;
         img {
           height: 350px;
+          @include respond-to(wide-screens) {
+            height: auto;
+            width: auto;
+            margin: 15px 0;
+          }
         }
         h3 {
           font-size: 2em;
@@ -1202,6 +1273,9 @@ body {
     padding: 35px;
     min-height: 400px;
     border-top: 10px solid $white-color;
+    @include respond-to(wide-screens) {
+      min-height: 550px;
+    }
     @include respond-to(handhelds) {
       min-height: 1px;
     }
@@ -1215,6 +1289,22 @@ body {
         float: left;
         margin: auto;
         margin-right: 35px;
+        @include respond-to(wide-screens) {
+          float: left;
+          width: 29%;
+          margin-right: 30px;
+        }
+        @include respond-to(handhelds) {
+          float: none;
+          width: 100%;
+          clear: both;
+        }
+        @include respond-to(medium-screens) {
+          float: none;
+          width: 100%;
+          clear: both;
+        }
+
         h3 {
           font-style: normal;
           font-weight: bold;
@@ -1223,12 +1313,24 @@ body {
           text-align: left;
           margin-left: 25px;
           position: relative;
+          @include respond-to(handhelds) {
+            margin: 25px 0;
+          }
+          @include respond-to(medium-screens) {
+            margin: 25px 0;
+          }
           span {
             border-bottom: 10px solid rgba(0, 0, 0, 0.06);
             color: rgba(255, 255, 255, 0);
             position: absolute;
             top: -9px;
             left: -20px;
+            @include respond-to(handhelds) {
+              display: none;
+            }
+            @include respond-to(medium-screens) {
+              display: none;
+            }
           }
         }
 
@@ -1238,6 +1340,7 @@ body {
             float: left;
             width: 50%;
             margin: 15px 0;
+
             a {
               text-decoration: none;
               color: $black-color;
@@ -1295,6 +1398,19 @@ body {
           li {
             float: none;
             text-align: center;
+            width: 100%;
+            padding: 0;
+            @include respond-to(wide-screens) {
+              margin: auto;
+            }
+            @include respond-to(handhelds) {
+              margin-bottom: 40px;
+              padding: 0;
+            }
+            @include respond-to(medium-screens) {
+              margin-bottom: 40px;
+              padding: 0;
+            }
           }
         }
         p {
@@ -1302,6 +1418,14 @@ body {
           font-weight: normal;
           font-size: 14px;
           line-height: 23px;
+          @include respond-to(handhelds) {
+            display: block;
+            text-align: center;
+          }
+          @include respond-to(medium-screens) {
+            display: block;
+            text-align: center;
+          }
         }
         a {
           text-decoration: none;
@@ -1316,16 +1440,15 @@ body {
           list-style: none;
           display: inline;
           @include respond-to(handhelds) {
-            float: none;
-            padding-top: 15px;
+            display: block;
           }
           @include respond-to(medium-screens) {
-            float: none;
-            padding-top: 15px;
+            display: block;
           }
           li {
             display: inline-block;
             width: auto;
+            text-align: center;
             a {
               color: $theme-color;
               border: 2px solid $theme-color;
@@ -1360,16 +1483,20 @@ overide carousel defaults
   position: absolute;
   left: -41.5%;
   top: 55%;
+  @include respond-to(wide-screens) {
+    left: -45.5%;
+    top: 65%;
+  }
   @include respond-to(medium-screens) {
     position: relative;
     left: 15%;
     top: 0;
   }
   @include respond-to(handhelds) {
-    position: relative;
-    left: 15%;
-    top: 0;
+    left: -45.5%;
+    top: 64%;
   }
+
   button {
     color: $theme-color;
     border: 1px solid rgba($black-color, 0.5);
@@ -1379,7 +1506,10 @@ overide carousel defaults
     border-radius: 50%;
     margin-top: 10px;
     margin-bottom: 10px;
-
+    @include respond-to(wide-screens) {
+      height: 45px;
+      width: 45px;
+    }
     &:hover {
       border: 1px solid $theme-color;
       em {
