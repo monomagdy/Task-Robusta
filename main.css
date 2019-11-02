@@ -597,7 +597,8 @@ body {
         text-decoration: none;
         font-size: 17px;
         line-height: 28px;
-        color: #000000; }
+        color: #000000;
+        text-transform: capitalize; }
         body .latest .card-big figcaption a:hover {
           text-decoration: none;
           color: #b4777b; }
@@ -655,11 +656,28 @@ body {
         body .quote span {
           display: none; } }
       body .quote span:first-of-type {
-        left: 170px;
-        top: -15px; }
+        left: -250px;
+        top: 43px; }
       body .quote span:last-of-type {
-        left: -200px;
-        top: -15px; }
+        top: -70px;
+        left: 105px; }
+    body .quote div.text {
+      text-align: center; }
+      body .quote div.text em {
+        display: none;
+        color: #b4777b;
+        margin: 5px; }
+        body .quote div.text em:last-of-type {
+          transform: rotateY(180deg); }
+        @media only screen and (max-width: 320px) {
+          body .quote div.text em {
+            display: inline-block; } }
+        @media only screen and (max-width: 768px) {
+          body .quote div.text em {
+            display: inline-block; } }
+        @media only screen and (max-width: 1025px) {
+          body .quote div.text em {
+            display: inline-block; } }
     body .quote p {
       font-weight: normal;
       font-size: 21px;
@@ -670,14 +688,32 @@ body {
       display: inline; }
       body .quote img:first-of-type {
         transform: rotate(10deg);
-        top: -35px;
+        top: 30px;
         position: relative;
-        left: 10px; }
+        left: -30%; }
+        @media only screen and (max-width: 320px) {
+          body .quote img:first-of-type {
+            display: none; } }
+        @media only screen and (max-width: 768px) {
+          body .quote img:first-of-type {
+            display: none; } }
+        @media only screen and (max-width: 1025px) {
+          body .quote img:first-of-type {
+            display: none; } }
       body .quote img:last-of-type {
-        transform: rotate(-210deg);
-        top: -20px;
+        transform: rotateY(180deg);
+        top: -85px;
         position: relative;
-        left: -10px; }
+        right: -26%; }
+        @media only screen and (max-width: 320px) {
+          body .quote img:last-of-type {
+            display: none; } }
+        @media only screen and (max-width: 768px) {
+          body .quote img:last-of-type {
+            display: none; } }
+        @media only screen and (max-width: 1025px) {
+          body .quote img:last-of-type {
+            display: none; } }
   body .vectoria {
     background: #fbf9f9;
     min-height: 560px;

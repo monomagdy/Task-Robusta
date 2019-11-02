@@ -703,6 +703,7 @@ body {
           font-size: 17px;
           line-height: 28px;
           color: $black-color;
+          text-transform: capitalize;
           &:hover {
             text-decoration: none;
             color: $theme-color;
@@ -774,12 +775,32 @@ body {
         display: none;
       }
       &:first-of-type {
-        left: 170px;
-        top: -15px;
+        left: -250px;
+        top: 43px;
       }
       &:last-of-type {
-        left: -200px;
-        top: -15px;
+        top: -70px;
+        left: 105px;
+      }
+    }
+    div.text {
+      text-align: center;
+      em {
+        display: none;
+        color: $theme-color;
+        margin: 5px;
+        &:last-of-type {
+          transform: rotateY(180deg);
+        }
+        @include respond-to(handhelds) {
+          display: inline-block;
+        }
+        @include respond-to(medium-screens) {
+          display: inline-block;
+        }
+        @include respond-to(wide-screens) {
+          display: inline-block;
+        }
       }
     }
     p {
@@ -794,15 +815,33 @@ body {
       display: inline;
       &:first-of-type {
         transform: rotate(10deg);
-        top: -35px;
+        top: 30px;
         position: relative;
-        left: 10px;
+        left: -30%;
+        @include respond-to(handhelds) {
+          display: none;
+        }
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+        @include respond-to(wide-screens) {
+          display: none;
+        }
       }
       &:last-of-type {
-        transform: rotate(-210deg);
-        top: -20px;
+        transform: rotateY(180deg);
+        top: -85px;
         position: relative;
-        left: -10px;
+        right: -26%;
+        @include respond-to(handhelds) {
+          display: none;
+        }
+        @include respond-to(medium-screens) {
+          display: none;
+        }
+        @include respond-to(wide-screens) {
+          display: none;
+        }
       }
     }
   }
